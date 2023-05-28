@@ -12,12 +12,25 @@ public class C05_Task5 {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
-       // Yeni bir Class olusturalim.C05_NavigationMethods
+
        // Youtube ana sayfasina gidelim . https://www.youtube.com/
+        driver.get("https://www.youtube.com/");
+
        // Amazon soyfasina gidelim. https://www.amazon.com/
+        driver.get("https://www.amazon.com/");
+
        // Tekrar YouTube'sayfasina donelim
+        driver.navigate().back();
+
       //  Yeniden Amazon sayfasina gidelim
+        driver.navigate().forward();
+
       //  Sayfayi Refresh(yenile) yapalim
+        driver.navigate().refresh();
+
        // Sayfayi kapatalim / Tum sayfalari kapatalim
+
+        driver.close();
+        driver.quit();
     }
 }

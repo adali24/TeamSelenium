@@ -39,11 +39,11 @@ public class C04_Task4 {
         }else System.out.println("amazon test failed");
 
         //Sayfa handle degerini yazdirin
-        System.out.println("Sayfa haskod = "+driver.getWindowHandle());
+        System.out.println("Amazon Page haskod = "+driver.getWindowHandle());
 
         //Sayfa HTML kodlarinda "Gateway" kelimesi gectigini test edin
         String actualHtmlCode = driver.getPageSource();
-        String expecteCode = " Gateway";
+        String expecteCode = "Gateway";
 
         if (actualHtmlCode.contains(expecteCode)){
             System.out.println("HTML Test PASSED");
