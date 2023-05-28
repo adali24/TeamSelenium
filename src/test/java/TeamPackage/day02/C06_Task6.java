@@ -41,5 +41,6 @@ public class C06_Task6 {
 
         //Sayfayi kapatin
         driver.close();
+        driver.quit();
     }
 }
