@@ -18,7 +18,7 @@ public class C02_Task2 {
         driver.get("https://www.facebook.com");
         String actualTitle = driver.getTitle();
         String expectedTitle = "facebook";
-        if (actualTitle.contains(expectedTitle)) {
+        if (actualTitle.equals(expectedTitle)) {
             System.out.println("Test PASSED");
         } else System.out.println("Test FAILED = " + actualTitle);
 
@@ -28,7 +28,7 @@ public class C02_Task2 {
 //        Sayfa basliginin “Walmart.com” icerdigini dogrulayin.
         String actuelTitle1 = driver.getTitle();
         String ecpectedTirle1 = "Walmart.com";
-        if (actuelTitle1.contains(expectedTitle)) {
+        if (actuelTitle1.contains(ecpectedTirle1)) {
             System.out.println("Walmart test passed ");
         } else System.out.println("walmart test failed = " + actuelTitle1);
 
