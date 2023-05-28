@@ -61,8 +61,8 @@ public class C03_Task3 {
             String beklenenUrl = driver.getCurrentUrl();
             String  guncelUrl = "https://www.amazon.com/";
             if (beklenenUrl.equals(guncelUrl)){
-                System.out.println(" Amazon link correct =" + driver.getCurrentUrl());
-            }else System.out.println(" Amazon link not correct ");
+                System.out.println("Amazon link correct =" + driver.getCurrentUrl());
+            }else System.out.println("Amazon link not correct ");
 
 //        Sayfayi kapatin
         driver.close();
