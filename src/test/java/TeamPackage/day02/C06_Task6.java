@@ -9,7 +9,7 @@ public class C06_Task6 {
     public static void main(String[] args) throws InterruptedException {
         System.setProperty("chromDriver", " src/resources/drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
-       // driver.manage().window().maximize();
+       //driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
         //.Amazon soyfasina gidelim. https://www.amazon.com/
@@ -24,7 +24,7 @@ public class C06_Task6 {
 
 
        //simge durumunda 3 saniye bekleyip sayfayi maximize yapin
-        Thread.sleep(3000);
+        Thread.sleep(5000);
         driver.manage().window().maximize();
 
        //Sayfanin konumunu ve boyutlarini maximize durumunda yazdirin

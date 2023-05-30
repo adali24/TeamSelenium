@@ -13,7 +13,7 @@ public class C01_Task1 {
 
         System.setProperty("chromDriver", " src/resources/drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
-        driver.manage().window().maximize();
+        //driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
         //Amazon soyfasina gidelim. https://www.amazon.com/
@@ -24,8 +24,9 @@ public class C01_Task1 {
         System.out.println("Sayfanin boyutu = "+driver.manage().window().getSize());
 
         //Sayfanin konumunu ve boyutunu istediginiz sekilde ayarlayin
-        driver.manage().window().setPosition(new Point(50,50));
-        driver.manage().window().setSize(new Dimension(100,600));
+        driver.manage().window().setPosition(new Point(50,100));
+        driver.manage().window().setSize(new Dimension(100,800));
+        Thread.sleep(4000);
 
         // Sayfanin sizin istediginiz konum ve boyuta geldigini test edin
         String position = "driver.manage().window().getPosition()";
@@ -41,6 +42,8 @@ public class C01_Task1 {
         }else System.out.println("Test failed 1 ");
 
         driver.close();
+
+
 
 
 
