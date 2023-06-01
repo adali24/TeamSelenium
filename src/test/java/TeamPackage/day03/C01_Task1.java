@@ -11,10 +11,10 @@ import java.util.List;
 
 public class C01_Task1 {
     public static void main(String[] args) throws InterruptedException {
-        System.setProperty("chromDriver", " src/resources/drivers/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src/resources/drivers/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
-        System.out.println(driver.getTitle());
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
         //-ÖDEV-
         //Amazon sayfasına gidiniz
