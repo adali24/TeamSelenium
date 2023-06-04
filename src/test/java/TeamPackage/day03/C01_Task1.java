@@ -19,13 +19,17 @@ public class C01_Task1 {
         //-ÖDEV-
         //Amazon sayfasına gidiniz
         driver.get("https://amazon.com");
+
         //iphone aratınız
         driver.findElement(By.id("twotabsearchtextbox")).sendKeys("iphone", Keys.ENTER);
+
         //çıkan sonuç yazısını konsola yazdırınız
+
         WebElement sonucYazisi = driver.findElement(By.xpath("//h1//*[@class='a-section a-spacing-small a-spacing-top-small']"));
         System.out.println(sonucYazisi.getText());
         String[] sonucSayisi = sonucYazisi.getText().split(" ");
         System.out.println("Sonuc Sayisi = " + sonucSayisi[2]);
+
         //çıkan ürünlerden ilk 5 tanesine tıklayıp sayfa başlıklarını yazdırınız
         for (int i = 0; i < 5; i++) {
             List<WebElement> urunler = driver.findElements(By.xpath("//*[@class='a-section aok-relative s-image-fixed-height']"));

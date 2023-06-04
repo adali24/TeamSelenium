@@ -31,13 +31,14 @@ public class C03_Task3 {
 
         //    5. Arama cubuguna "Nutella" yazip aratin
          driver.findElement(By.xpath("//*[@name='q']")).sendKeys("Nutella",Keys.ENTER);
-        // driver.findElement(By.xpath("(//*[@class='gNO89b'])[2]")).click();
+
+        driver.findElement(By.xpath("(//*[@class='gNO89b'])[2]")).click();
 
         //  6. Bulunan sonuc sayisini yazdirin
         WebElement sonucYazisi = driver.findElement(By.xpath("//*[@id='result-stats']"));
         String sonucSayisi = sonucYazisi.getText().split(" ")[1].replace(".","");
         System.out.println("Sonuc Sayisi = " + sonucSayisi);
-        int sayi = Integer.parseInt(sonucSayisi);
+        int sayi = Integer.parseInt(sonucSayisi);// striongi int e cevirimek icin yazdigimiz kod
 
 //7. sonuc sayisinin 10 milyon'dan fazla oldugunu test edin
         if (sayi > 100000000) {
