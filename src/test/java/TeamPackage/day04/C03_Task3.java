@@ -31,23 +31,20 @@ public class C03_Task3 {
 
         //    5. Arama cubuguna "Nutella" yazip aratin
          driver.findElement(By.xpath("//*[@name='q']")).sendKeys("Nutella",Keys.ENTER);
-         driver.findElement(By.xpath("(//*[@class='gNO89b'])[2]")).click();
+        // driver.findElement(By.xpath("(//*[@class='gNO89b'])[2]")).click();
 
         //  6. Bulunan sonuc sayisini yazdirin
-        WebElement sonuc = driver.findElement(By.xpath("//*[@id='result-stats']"));
-        String SonucSayisi [] = sonuc.getText().split(" ");
-        System.out.println("sonuc = " +SonucSayisi[1]);
+        WebElement sonucYazisi = driver.findElement(By.xpath("//*[@id='result-stats']"));
+        String sonucSayisi = sonucYazisi.getText().split(" ")[1].replace(".","");
+        System.out.println("Sonuc Sayisi = " + sonucSayisi);
+        int sayi = Integer.parseInt(sonucSayisi);
 
-
-        //7. sonuc sayisinin 10 milyon'dan fazla oldugunu test edin
-        String gercekSayi = "110000000";
-        if (gercekSayi.equals("10000000")){
-            System.out.println("evet esit");
-        }else System.out.println(" hayir degil");
-
-
-      // if (SonucSayisi[1]10000000){
-
+//7. sonuc sayisinin 10 milyon'dan fazla oldugunu test edin
+        if (sayi > 100000000) {
+            System.out.println("Sonuc sayisi 10 milyondan fazla");
+        }else {
+            System.out.println("Sonuc sayisi 10 milyondan az veya esit");
+        }
 
 
 
