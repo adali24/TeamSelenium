@@ -1,14 +1,48 @@
 package TeamPackage.day03;
 
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.time.Duration;
 public class C03_Task3 {
     public static void main(String[] args) {
-        //https://id.heroku.com/login sayfasina gidin
-        //Bir mail adersi giriniz
-        //Bir password giriniz
-        //Login butonuna tiklayiniz
-        //"There was a problem with your login." texti gorunur ise
-        //"kayit yapilamadi" yazdiriniz
-        //eger yazi gorunur degilse "kayit yapildi" yazdiriniz
-        //sayfayı kapatiniz
-    }
-}
+
+
+                System.setProperty("chromDriver", " src/resources/drivers/chromedriver.exe");
+                WebDriver driver = new ChromeDriver();
+                driver.manage().window().maximize();
+                driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
+
+
+                //https://id.heroku.com/login sayfasina gidin
+                driver.get("https://id.heroku.com/login");
+
+                //Bir mail adresi giriniz
+                driver.findElement(By.xpath("//*[@id='onetrust-accept-btn-handler']")).click();
+                driver.findElement(By.xpath("//*[@id='email']")).sendKeys("atin@gmail.com", Keys.TAB, "1234asd", Keys.ENTER);
+
+                //Bir password giriniz.
+                //Login butonuna tiklayini
+                // "There was a problem with your login." texti gorunur ise
+                //"kayit yapilamadi" yazdiriniz
+                //eger yazi gorunur degilse "kayit yapildi" yazdiriniz
+                WebElement actualtext = driver.findElement(By.xpath("//*[.='There was a problem with your login.']"));
+                String expectedtext = "There was a problem with your login.";
+                if (actualtext.isDisplayed()) {
+                    System.out.println("Kayit yapilmadi");
+                } else System.out.println("Kayit yapildi");
+
+                //sayfayı kapatiniz
+                driver.close();
+
+
+            }
+
+
+        }
+
+
