@@ -38,6 +38,7 @@ public class C02_windowHandel extends TestBase {
 
         //Ilk acilan sayfaya donun ve amazon sayfasina dondugunuzu test edin
         driver.switchTo().window(handelDeger);
+        wait(2);
 
 
     }
