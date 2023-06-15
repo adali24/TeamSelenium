@@ -5,7 +5,7 @@ import org.junit.Test;
 import org.openqa.selenium.WindowType;
 import utilities.TestBase;
 
-public class C03 extends TestBase {
+public class C01 extends TestBase {
     @Test
     public void name() {
 
