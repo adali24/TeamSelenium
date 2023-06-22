@@ -47,7 +47,11 @@ wait(3);
         driver.findElement(By.xpath("(//*[@class='fa fa-shopping-cart'])[1]")).click();
 
 // 9. Verify both products are added to Cart
+        WebElement picture1 = driver.findElement(By.xpath("//*[text()='Blue Top']"));
+        Assert.assertTrue(picture1.isDisplayed());
 
+        WebElement picture2 = driver.findElement(By.xpath("//*[text()='Men Tshirt']"));
+        Assert.assertTrue(picture2.isDisplayed());
 
 // 10. Verify their prices, quantity and total price
 
