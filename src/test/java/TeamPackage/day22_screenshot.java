@@ -9,10 +9,9 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.Map;
 
-public class day22 {
+public class day22_screenshot {
     @Test
     public void test() throws IOException {
         String dosyaYolu = "src/test/java/TeamPackage/excel/ulkeler.xlsx";
